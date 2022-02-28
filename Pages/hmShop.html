@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M Lite (Shop)</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="hmLite (css).css">
+<link href="https://db.onlinewebfonts.com/c/09c8fb44d2c62d99647e4ce58736293e?family=HMSansLatin-Regular" rel="stylesheet" type="text/css"/>
+ 
+
+<body>
+<div class= "shopPageGrid">    <!--   Entire Structure of Page    -->
+
+    <!--                    Nav Bar    -  Section1     (shared class)           -->
+    <div class="navBar 2">
+        <nav class = "navbar Banner 2">
+
+            <div class = "topMenuContainer 2">
+                 <div class = "servicesCont 2">
+                    <ul class="services menu 1">
+                        <li class="servicesLink 1"><a href="#" class="servicesLink 1">Customer Service</a></li>
+                        <li class="servicesLink 2"><a href="#" class="servicesLink 2"></a>Student Discount</li>
+                        <li class="servicesLink 3"><a href="#" class="servicesLink 3">Find a store</a></li>
+                        <div class="dropdownDot Icon"></div>   <!-- H&M uses pseudo elements to display icons. I'm using full icons for convenience -->
+                    </ul>
+                </div>
+                <div class = "personalCartCont 2">
+                    <ul class="personalCart menu 2">    <!-- Icon div class isn't included in this menu. This frees line space, increases readibility and fits because all li items have an icon. -->
+                        <li class="personalCartLink 1"><a href="#" class="personalCartLink 1">Sign in</a></li>  
+                        <li class="personalCartLink 2"><a id="favOpen" class="personalCartLink 2">Favorites</a></li>
+                        <li class="personalCartLink 3"><a id= "cartOpen" class="personalCartLink 3">Shopping bag(0)</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class = "baseMenuContainer 2">
+                 <div class = "productSectCont 2">
+                    <ul class="productSectMenu">
+                       <li class="productSectLink 1"><a href="#" class="productSectLink 1">Women</a></li>
+                        <li class="productSectLink 2"><a href="#" class="productSectLink 2">Divided</a></li>
+                        <li class="productSectLink 3"><a href="#" class="productSectLink 3">Men</a></li>
+                        <li class="productSectLink 4"><a href="#" class="productSectLink 4">Baby</a></li>
+                        <li class="productSectLink 5"><a href="#" class="productSectLink 5">Kids</a></li>
+                        <li class="productSectLink 6"><a href="#" class="productSectLink 6">H&M Home</a></li>
+                        <li class="productSectLink 7"><a href="#" class="productSectLink 7">Sale</a></li>
+                        <li class="productSectLink 8"><a href="#" class="productSectLink 8">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class = "searchProdCont 2">
+                    <ul class="searchProduct menu 3">
+                        <div class="searchLens Icon"></div>
+                        <li class="searchProductLink 1"><input class = "searchProductInput 1"></a>Search products</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class = "pageLocationContainer">
+                <div class = "pageLocationCont">
+                    <ul class="pageLocationMenu">
+                       <li class="pageLocationLink 1">HM.com<a href="#" class="pageLocationLink 1"></a></li>
+                        <li class="pageLocationLink 2">/Shop All<a href="#" class="pageLocationLink 2"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+
+    <!--          Modal (1)     -  Checkout Cart         -->
+    <div id="modalCheckout" class="modal 1">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class = "popupHeader"></h2>
+            </div>
+    
+            <div class="modal-body">
+                <div class = "cartContainer">
+                    <div class = "cartBox -1">
+                        <div class = "cartProd-image -1"></div>
+
+                        <div class = "cartTextBox -1">
+                            <p class = "cartProdHeader -1">Your shopping bag is empty</p>
+                            <p class ="cartProdPrice -1">Order value<span class = "textAlignRight">$0.00</span></p>
+                            <p class ="cartProdSale -1"></p>
+                            <p class ="cartProdCount -1"></p>
+                            <p class ="cartProdColor -1">Total <span class = "textAlignRight">$0.00</span></p>
+                            <p class ="cartProdSize -1"></p>
+                        </div>
+
+                        <div class = "discountBtnDiv">
+                            <button class = "discountBtn 1">10%</button>
+                            <button class = "discountBtn 2">15%</button>
+                            <button class = "discountBtn 3">40%</button>
+                        </div>
+
+                        <div class = "addProd -1">
+                            <select class='addProdDropdown -1'>
+                                <option class = "selectProdNum">1</option>
+                                <option class = "selectProdNum">2</option>
+                                <option class = "selectProdNum">3</option>
+                            </select>
+                        </div>
+
+                        <button class = "deleteProd -1">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                role="img" 
+                                width="1em" 
+                                height="1em" 
+                                preserveAspectRatio="xMidYMid meet" 
+                                viewBox="0 0 24 24">
+                            <g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 7h16"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12"/><path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></g></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--          Modal (2)     -  Favorites         -->
+    <div id="modalFavorites" class="modal 2">
+
+        <div class="modal-content 2">
+            <div class="modal-header 2">
+                <span class="close">&times;</span>
+                <h2 class = "popupHeader"></h2>
+            </div>
+    
+            <div class="modal-body">
+                <div class = "favoriteCont">
+                    <div class = "favoriteHeaderCont">
+                        <h3 class = "favHeader">Favorites</h3>
+
+                        <div class = "soldOutCont">
+                            <div class = "soldHeader">Save your favorite items</div>
+                            <div class = "soldDesc">Want to save the items you love? Just click on the heart icon found on the product image and it will show up here.</div> <!-- alt One or more of your favorites are sold out, but you can always try to find the, in a store near you.-->
+                            <button class = "soldClose">Browse Now</button>
+                        </div>
+                    </div>
+
+                    <div class ="favProdGrid section">
+                        <div class ="productGrid container 3">
+                            <div class ="prodCont fav 0">
+                                <div class = "prodImage fav 0">
+                                    <button class = "deleteItem 0">
+                                        <svg class="trashIcon" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                            <path fill-rule="evenodd" d="M14 4v1h-1v10.455c0 .3-.224.545-.5.545h-11c-.276 0-.5-.244-.5-.545V5H0V4h14zm-2 1v10H2V5h10zM9.5 0a.5.5 0 01.5.5V2h4v1H0V2h4V.5a.5.5 0 01.5-.5h5zM9 1H5v1h4V1zM5 8h1v4H5V8zm3 0h1v4H8V8z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class = "prodTextBox fav 0">
+                                    <p class = "prodHeader fav 0">Regular Fit Crew-neck T-shirt</p>
+                                    <p class = "prodPrice fav 0">$ 6.99</p>
+                                    <p class = "prodType fav 0">Dark Beige</p>
+                                </div>
+
+                                <div class = "selectSize 0">
+                                    <button class = "openSize 0">
+                                        <p class = "selectHeader 0">Select size</p>
+                                        <div class = "dropIcon 0"></div>
+                                    </button>
+
+                                    <div class ="filtContainer fav 0">
+                                        <button class ="sortSetting fav 1">
+                                            <div class = "checkBox fav 1"></div>
+                                            <p class = "settingName fav 1">XS</p>
+                                        </button>
+                                        <button class ="sortSetting fav 2">
+                                            <div class = "checkBox fav 2"></div>
+                                            <p class = "settingName fav 2">S</p>
+                                        </button>
+                                        <button class ="sortSetting fav 3">
+                                            <div class = "checkBox fav 3"></div>
+                                            <p class = "settingName fav 3">M</p>
+                                        </button>
+                                        <button class ="sortSetting fav 4">
+                                            <div class = "checkBox fav 4"></div>
+                                            <p class = "settingName fav 4">L</p>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                                <button class = "addFavCartBtn 0">
+                                    <svg class="bagIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                        <path d="M12 .1c2.9 0 4.9 1.4 4.9 3.8v.6h3.8v5.1c0 4.7 2.1 13.3.5 13.3-.7 0-5 1.1-9.2 1.1-4.6 0-9.2-1.1-9.2-1.1 -1.5 0 .5 
+                                        -8.7.5-13.3V4.4h3.8v-.6c0-2.4 2-3.7 4.9-3.7zm7.6 5.4h-2.7v2.2h-1.1V5.5H8.2v2.2H7.1V5.5H4.4v4c0 1.3-.1 2.9-.4 5.3l-.1.9c-.4 3-.5 
+                                        3.9-.5 5v1.2c.8.1 1.6.3 2.4.4 2.1.3 4.2.5 6.1.5h.5c1.6 0 3.3-.2 5.2-.5.2 0 2-.4 2.9-.5v-1.4c0-1-.2-1.9-.5-4.7 0-.3-.1-.6-.1-.9-.3-2.4-.4-4-.4-5.3v-4zM12 
+                                        1.2c-2.3 0-3.8 1-3.8 2.6v.6h7.6v-.6c0-1.7-1.5-2.6-3.8-2.6z">
+                                        </path>
+                                    </svg>
+
+                                    <p class = "addBagDesc 0">Add to Bag</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+
+<!--                    Sidebar         -       Section2                              -->
+    <div class="sideBar"> 
+
+        <div class="sidebarContainer"> 
+            <div class = "newArrival sideCont 1">
+                <h2 class="sidebarHeader 1">New Arrivals</h2>
+                <ul class="sidelinkSect 1">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">View All</a></li>
+                    <li class="sidebarLink 2"><a href="#" class="sidebarLink 2">Clothes</a></li>
+                    <li class="sidebarLink 3"><a href="#" class="sidebarLink 3">Shoes and Accessories</a></li>
+                </ul>
+            </div>
+
+            <div class = "offerDeals sideCont 2">
+                <h2 class="sidebarHeader 2">Offers & Deals</h2>
+                <ul class="sidelinkSect 2">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">Up to 50% off</a></li>
+                    <li class="sidebarLink 2"><a href="#" class="sidebarLink 2">Hoodies & Sweatshirts from $14.99</a></li>
+                    <li class="sidebarLink 3"><a href="#" class="sidebarLink 3">Pants from $10.99</a></li>
+                    <li class="sidebarLink 4"><a href="#" class="sidebarLink 4">Basics Multipack from $9.99</a></li>
+                    <li class="sidebarLink 5"><a href="#" class="sidebarLink 5">Fall Styles from $14.99</a></li>
+                    <li class="sidebarLink 6"><a href="#" class="sidebarLink 6">Student Discount: Get 15% off</a></li>
+                </ul>
+            </div>
+
+            <div class = "trendNow sideCont 3">
+                <h2 class="sidebarHeader 3">Trending Now</h2>
+                <ul class="sidelinkSect 3">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">The Fall Shop</a></li>
+                    <li class="sidebarLink 2"><a href="#" class="sidebarLink 2">The Graphics Shop</a></li>
+                    <li class="sidebarLink 3"><a href="#" class="sidebarLink 3">Fall Streetwear</a></li>
+                    <li class="sidebarLink 4"><a href="#" class="sidebarLink 4">Most Popular Tops & Pants</a></li>
+                </ul>
+            </div>
+
+            <div class = "shopProd sideCont 4">
+                <h2 class="sidebarHeader 4">Shop by Product</h2>
+                <ul class="sidelinkSect 4">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">View All</a></li>
+                    <li class="sidebarLink 2"><a href="#" class="sidebarLink 2">Hoodies & Sweatshirts</a></li>
+                    <li class="sidebarLink 3"><a href="#" class="sidebarLink 3">T-Shirts & Tanks</a></li>
+                    <li class="sidebarLink 4"><a href="#" class="sidebarLink 4">Shirts</a></li>
+                    <li class="sidebarLink 5"><a href="#" class="sidebarLink 5">Pants</a></li>
+                    <li class="sidebarLink 6"><a href="#" class="sidebarLink 6">Jeans</a></li>
+                    <li class="sidebarLink 7"><a href="#" class="sidebarLink 7">Jackets & Coats</a></li>
+                    <li class="sidebarLink 8"><a href="#" class="sidebarLink 8">Cardigans & Sweaters</a></li>
+                    <li class="sidebarLink 9"><a href="#" class="sidebarLink 9">Suits & Blazers</a></li>
+                    <li class="sidebarLink 10"><a href="#" class="sidebarLink 10">Basics</a></li>
+                    <li class="sidebarLink 11"><a href="#" class="sidebarLink 11">Shorts</a></li>
+                    <li class="sidebarLink 12"><a href="#" class="sidebarLink 12">Accessories</a></li>
+                    <li class="sidebarLink 13"><a href="#" class="sidebarLink 13">Shoes</a></li>
+                    <li class="sidebarLink 14"><a href="#" class="sidebarLink 14">Activewear</a></li>
+                    <li class="sidebarLink 15"><a href="#" class="sidebarLink 15">Underwear</a></li>
+                    <li class="sidebarLink 16"><a href="#" class="sidebarLink 16">Sleepwear & Loungewear</a></li>
+                    <li class="sidebarLink 17"><a href="#" class="sidebarLink 17">Socks</a></li>
+                    <li class="sidebarLink 18"><a href="#" class="sidebarLink 18">Swimwear</a></li>
+                    <li class="sidebarLink 19"><a href="#" class="sidebarLink 19">Premium Selection</a></li>
+                    <li class="sidebarLink 20"><a href="#" class="sidebarLink 20">Extended sizes</a></li>
+                    <li class="sidebarLink 21"><a href="#" class="sidebarLink 21">Care products</a></li>
+                </ul>
+            </div>
+
+            <div class = "shopConcept sideCont 5">
+                <h2 class="sidebarHeader 5">Shop by Concept</h2>
+                <ul class="sidelinkSect 5">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">H&M Men</a></li>
+                    <li class="sidebarLink 2"><a href="#" class="sidebarLink 2">Modern Classic</a></li>
+                    <li class="sidebarLink 3"><a href="#" class="sidebarLink 3">Casual Wear</a></li>
+                    <li class="sidebarLink 4"><a href="#" class="sidebarLink 4">Divided</a></li>
+                    <li class="sidebarLink 5"><a href="#" class="sidebarLink 5">Basics</a></li>
+                </ul>
+            </div>
+       
+            <div class = "giftCards sideCont 6">
+                <h2 class="sidebarHeader 6">Gift Cards</h2>
+                <ul class="sidelinkSect 6">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">Gift Cards</a></li>
+                </ul>
+            </div>
+
+            <div class = "sustain sideCont 7">
+                <h2 class="sidebarHeader 7">Sustainability</h2>
+                <ul class="sidelinkSect 7">
+                    <li class="sidebarLink 1"><a href="#" class="sidebarLink 1">Our products</a></li>
+                    <li class="sidebarLink 2"><a href="#" class="sidebarLink 2">H&M Take Care</a></li>
+                </ul>
+            </div>
+        </div>
+  </div>
+ 
+ 
+
+<!--             saleBanner          -     Section4                       -->
+    <div class ="saleBanner section 2">
+
+        <div class="saleBanner container 2">
+            <button class = "invisibleBtn 1">
+                <div class = "sale bannerWrap">
+                    <p class = "sale bannerHeader">Fall Sale: new markdowns added!</p>
+                    <div class = "moreInfoBtn 1">i</div>
+                </div>
+            </button>
+        </div>
+
+    </div>
+
+
+<!--             menShirtInfo            -          Section13                 -->
+    <div class ="menShirtInfo section">
+        <div class="menShirtInfo sectInfoCont 1">
+            <h1 class = "menInfo sectInfoHeader 1">Men's</h1>
+            <p class = "menInfo sectInfoDesc 1">Browse our entire selection of men's clothing at H&M. From basics and loungewear to sweaters and suiting, we have something for every season and occasion. Whether you prefer bright colors and loud patterns or neutral, solid colors, find the clothes that match your style.</p>
+        </div>
+    </div>
+
+
+    
+<!--          prodFilters      -            Section14                       -->
+    <div class ="prodFilters section">
+
+        <div class="prodFilters menu">
+            <div class = "prodFiltersCont">
+
+                <div class = "filterGroup 1">                           
+                    <button class ="filterBtn 1">   
+                        <p class = "filterName 1">Sort By</p>
+                        <div class = "dropIcon 1"></div>
+                    </button>
+
+                    <div class ="filtContainer 1">
+                        <button class ="sortSetting 1">
+                            <input class = "checkCircle 1">
+                            <p class = "settingName 1">Recommended</p>
+                        </button>
+
+                        <button class ="sortSetting 2">
+                            <input class = "checkCircle 2">
+                            <p class = "settingName 2">Newest</p>
+                        </button>
+
+                        <button class ="sortSetting 3">
+                            <input class = "checkCircle 3">
+                            <p class = "settingName 3">Lowest Price</p>
+                        </button>
+
+                        <button class ="sortSetting 4">
+                            <input class = "checkCircle 4">
+                            <p class = "settingName 4">Highest Price</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class = "filterGroup 2">
+                    <button class ="filterBtn 2">   
+                        <p class = "filterName 2">Conscious</p>
+                        <div class = "dropIcon 2"></div>
+                    </button>
+
+                    <div class ="filtContainer 2">
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">Conscious</p>
+                            <p class = "settingName 1"><span class="textAlignRight">37</span></p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class = "filterGroup 3">
+                    <button class ="filterBtn 3">   
+                        <p class = "filterName 3">Size</p>
+                        <div class = "dropIcon 3"></div>
+                    </button>
+
+                    <div class ="filtContainer 3">
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">XS</p>
+                        </button>
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">S</p>
+                        </button>
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">M</p>
+                        </button>
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">L</p>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class = "filterGroup 4">
+                    <button class ="filterBtn 4">   
+                        <p class = "filterName 4">Color</p>
+                        <div class = "dropIcon 4"></div>
+                    </button>
+
+                    <div class ="filtContainer 4">
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox beige"></div>
+                            <p class = "colorName 1">Beige</p>
+                            <p class = "colorNum 1">13</p>                          <!--num must be fixed--> 
+                        </button>
+
+                        <button class ="sortSetting 2">
+                            <div class = "checkBox black"></div>
+                            <p class = "colorName 2">Black</p>
+                            <p class = "colorNum 2">13</p>                          
+                        </button>
+
+                        <button class ="sortSetting 13">
+                            <div class = "checkBox blue"></div>
+                            <p class = "colorName 3">Blue</p>
+                            <p class = "colorNum 3">13</p>                          
+                        </button>
+
+                        <button class ="sortSetting 4">
+                            <div class = "checkBox brown"></div>
+                            <p class = "colorName 4">Brown</p>
+                            <p class = "colorNum 4">13</p>                          
+                        </button>
+
+                        <button class ="sortSetting 5">
+                            <div class = "checkBox gray"></div>
+                            <p class = "colorName 5">Gray</p>
+                            <p class = "colorNum 5">13</p>                          
+                        </button>
+
+                        <button class ="sortSetting 6">
+                            <div class = "checkBox green"></div>
+                            <p class = "colorName 6">Green</p>
+                            <p class = "colorNum 6">13</p>                          
+                        </button>
+
+                        <button class ="sortSetting 7">
+                            <div class = "checkBox white"></div>
+                            <p class = "colorName 7">White</p>
+                            <p class = "colorNum 7">13</p>                          
+                        </button>
+     
+                    </div>
+                </div>
+
+
+                <div class = "filterGroup 5">
+                    <button class ="filterBtn 5">   
+                        <p class = "filterName 5">Pattern</p>
+                        <div class = "dropIcon 5"></div>
+                    </button>
+
+                    <div class ="filtContainer 5">
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">checked</p>
+                            <p class = "settingNum 1">14</p>
+                        </button>
+
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">color-block</p>
+                            <p class = "settingNum 1">2</p>
+                        </button>
+
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">dotted</p>
+                            <p class = "settingNum 1">2</p>
+                        </button>
+
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">patterned</p>
+                            <p class = "settingNum 1">6</p>
+                        </button>
+
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">pinstriped</p>
+                            <p class = "settingNum 1">1</p>
+                        </button>
+
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">solid-color</p>
+                            <p class = "settingNum 1">x</p>
+                        </button>
+
+                        <button class ="sortSetting 1">
+                            <div class = "checkBox 1"></div>
+                            <p class = "settingName 1">striped</p>
+                            <p class = "settingNum 1">X</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class = "filterGroup 6">
+                    <button class ="filterBtn 6">
+                        <div class = "allFiltIcon"></div>
+                        <p class = "filterName 6">All Filters</p>
+                    </button>
+                </div>
+            </div>
+
+            <div class = "prodViewContainer">
+                <p class = "totalProdItems">96 items</p>
+                <button class = "genderSetting">Men</button>
+                <button class = "modalSetting">Model</button>
+                <button class = "productSetting">Product</button>
+
+                <div class = "prodViewLGImage">
+                    <button class = "prodViewLGSetting"></button>
+                </div>
+
+                <div class = "prodViewSMImage">
+                    <button class = "prodViewSMSetting"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--            selectedFilters               -      Section15              -->
+    <div class ="selectedFilters section">
+
+        <div class="selectedFilters container">
+            <ul class = "selectedfiltersMenu">                                         <!-- filters are created dynamically through JS -->
+                <h2 class = "selectedFiltHeader">Selected Filters</h2>
+
+                <li class= "selectFilt 0">
+                    <p class = "selectFiltName 0">Enter Filter</p>              
+                    <button class = "selectFiltBtn 0"></button>
+                </li>
+            </ul>
+
+            <button class = "clearSelectFilBtn">Clear Filters</button>
+        </div>
+
+    </div>
+
+
+
+<!--                 menProdGrid          -          Section16              -->
+    <div class ="menProdGrid section">
+
+        <div class ="productGrid container">
+            <div class ="prodCont sec1 1" id="1">
+                <div class = "prodImage 1">
+                    <button class = "addItem 1"></button>
+                    <button class = "favoriteItem 1"></button>
+                </div>
+
+                <div class = "prodTextBox sec 1">
+                    <p class = "prodHeader 1">Regular Fit Crew-neck T-shirt</p>
+                    <p class = "prodPrice 1">$ 6.99</p>
+                    <p class = "prodType 1">Dark Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkBeige"></button>
+                        <button class ="prodColor white"></button>          <!-- since I don't have SASS @extend classes, I will just add color classes here-->
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor darkGray"></button>        
+                        <p class ="prodColorCount">+8</button>
+                    </div>
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 2" id="2">
+                <div class = "prodImage 2">
+                    <button class = "addItem 2"></button>
+                    <button class = "favoriteItem 2"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 2">
+                    <p class = "prodHeader 2">Regular Fit Crew-neck T-shirt</p>
+                    <p class = "prodPrice 2">$ 6.99</p>
+                    <p class = "prodType 2">White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor darkGray"></button>
+                        <button class ="prodColor darkBeige"></button>
+                        <p class ="prodColorCount">+8</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 3" id="3">
+                <div class = "prodImage 3">
+                    <button class = "addItem 3"></button>
+                    <button class = "favoriteItem 3"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 3">
+                    <p class = "prodHeader 3">Regular Fit Crew-neck T-shirt</p>
+                    <p class = "prodPrice 3">$ 6.99</p>
+                    <p class = "prodType 3">Olive</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor darkGray"></button>         
+                        <button class ="prodColor darkBeige"></button>
+                        <button class ="prodColor white"></button>
+                        <p class ="prodColorCount">+8</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 4" id="4">
+                <div class = "prodImage 4">
+                    <button class = "addItem 4"></button>
+                    <button class = "favoriteItem 4"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 4">
+                    <p class = "prodHeader 4">Regular Fit Crew-neck T-shirt</p>
+                    <p class = "prodPrice 4">$ 6.99</p>
+                    <p class = "prodType 4">Navy</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkGray"></button>
+                        <button class ="prodColor darkBeige"></button>         
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount">+8</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 5" id="5">
+                <div class = "prodImage 5">
+                    <button class = "addItem 5"></button>
+                    <button class = "favoriteItem 5"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 5">
+                    <p class = "prodHeader 5">Regular Fit Crew-neck T-shirt</p>
+                    <p class = "prodPrice 5">$ 6.99</p>
+                    <p class = "prodType 5">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkBeige"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor darkGray"></button>
+                        <p class ="prodColorCount">+8</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 6" id="6">
+                <div class = "prodImage 6">
+                    <button class = "addItem 6"></button>
+                    <button class = "favoriteItem 6"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 6">
+                    <p class = "prodHeader 6">T-shirt with Printed Design</p>
+                    <p class = "prodPrice 6">$ 12.99</p>
+                    <p class = "prodType 6">Beige/Orange</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkBeige"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor orange"></button>
+                        <button class ="prodColor green"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 7" id="7">
+                <div class = "prodImage 7">
+                    <button class = "addItem 7"></button>
+                    <button class = "favoriteItem 7"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 7">
+                    <p class = "prodHeader 7">T-shirt with Printed Design</p>
+                    <p class = "prodPrice 7">$ 17.99</p>
+                    <p class = "prodType 7">Orange/White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor orange"></button>
+                        <button class ="prodColor green"></button>         
+                        <button class ="prodColor darkBeige"></button>
+                        <button class ="prodColor black"></button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 8" id="8">
+                <div class = "prodImage 8">
+                    <button class = "addItem 8"></button>
+                    <button class = "favoriteItem 8"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 8">
+                    <p class = "prodHeader 8">T-shirt with Printed Design</p>
+                    <p class = "prodPrice 8">$ 12.99</p>
+                    <p class = "prodType 8">Black/White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor green"></button>
+                        <button class ="prodColor darkBeige"></button>         
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor orange"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 9" id="9">
+                <div class = "prodImage 9">
+                    <button class = "addItem 9"></button>
+                    <button class = "favoriteItem 9"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 9">
+                    <p class = "prodHeader 9">Slim Fit Turtleneck Shirt</p>
+                    <p class = "prodPrice 9">$ 17.99</p>
+                    <p class = "prodType 9">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor lightGray"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 10" id="10">
+                <div class = "prodImage 10">
+                    <button class = "addItem 10"></button>
+                    <button class = "favoriteItem 10"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 10">
+                    <p class = "prodHeader 10">Relaxed Fit Sports Shirt</p>
+                    <p class = "prodPrice 10">$ 24.99</p>
+                    <p class = "prodType 10">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor navy"></button>
+                        <button class ="prodColor beige"></button>        
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 11" id="11">
+                <div class = "prodImage 11">
+                    <button class = "addItem 11"></button>
+                    <button class = "favoriteItem 11"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 11">
+                    <p class = "prodHeader 11">Relaxed Fit Sports Shirt</p>
+                    <p class = "prodPrice 11">$ 24.99</p>
+                    <p class = "prodType 11">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor navy"></button>
+                        <button class ="prodColor beige"></button> 
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 12" id="12">
+                <div class = "prodImage 12">
+                    <button class = "addItem 12"></button>
+                    <button class = "favoriteItem 12"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 12">
+                    <p class = "prodHeader 12">Long-sleeved Cotton T-shirt</p>
+                    <p class = "prodPrice 12">$ 17.99</p>
+                    <p class = "prodType 12">Dark Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor cream"></button>         
+                        <button class ="prodColor green"></button>
+                        <button class ="prodColor darkBrown"></button>
+                        <p class ="prodColorCount">+4</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 13" id="13">
+                <div class = "prodImage 13">
+                    <button class = "addItem 13"></button>
+                    <button class = "favoriteItem 13"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 13">
+                    <p class = "prodHeader 13">Long-sleeved Cotton T-shirt</p>
+                    <p class = "prodPrice 13">$ 17.99</p>
+                    <p class = "prodType 13">Steel Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor cream"></button>         
+                        <button class ="prodColor green"></button>
+                        <button class ="prodColor darkBrown"></button>
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount">+4</button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 14" id="14">
+                <div class = "prodImage 14">
+                    <button class = "addItem 14"></button>
+                    <button class = "favoriteItem 14"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 14">
+                    <p class = "prodHeader 14">Long-sleeved Shirt Long Fit</p>
+                    <p class = "prodPrice 14">$ 12.99</p>
+                    <p class = "prodType 14">Sky</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor olive"></button>
+                        <button class ="prodColor beige"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 15" id="15">
+                <div class = "prodImage 15">
+                    <button class = "addItem 15"></button>
+                    <button class = "favoriteItem 15"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 15">
+                    <p class = "prodHeader 15">Long-sleeved Shirt Long Fit</p>
+                    <p class = "prodPrice 15">$ 12.99</p>
+                    <p class = "prodType 15">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor olive"></button>
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor white"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 16" id="16">
+                <div class = "prodImage 16">
+                    <button class = "addItem 16"></button>
+                    <button class = "favoriteItem 16"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 16">
+                    <p class = "prodHeader 16">Long-sleeved Shirt Long Fit</p>
+                    <p class = "prodPrice 16">$ 12.99</p>
+                    <p class = "prodType 16">White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor olive"></button>
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 17" id="17">
+                <div class = "prodImage 17">
+                    <button class = "addItem 17"></button>
+                    <button class = "favoriteItem 17"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 17">
+                    <p class = "prodHeader 17">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 17">$ 24.99</p>
+                    <p class = "prodType 17">Light Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor beige"></button>
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 18" id="18">
+                <div class = "prodImage 18">
+                    <button class = "addItem 18"></button>
+                    <button class = "favoriteItem 18"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 18">
+                    <p class = "prodHeader 18">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 18">$ 24.99</p>
+                    <p class = "prodType 18">White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor brown"></button>
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 19" id="19">
+                <div class = "prodImage 19">
+                    <button class = "addItem 19"></button>
+                    <button class = "favoriteItem 19"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 19">
+                    <p class = "prodHeader 19">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 19">$ 24.99</p>
+                    <p class = "prodType 19">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor black"></button>   
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 20" id="20">
+                <div class = "prodImage 20">
+                    <button class = "addItem 20"></button>
+                    <button class = "favoriteItem 20"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 20">
+                    <p class = "prodHeader 20">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 20">$ 19.99</p>
+                    <p class = "prodType 20">Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor black"></button> 
+                        <button class ="prodColor white"></button>     
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 21" id="21">
+                <div class = "prodImage 21">
+                    <button class = "addItem 21"></button>
+                    <button class = "favoriteItem 21"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 21">
+                    <p class = "prodHeader 21">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 21">$ 29.99</p>
+                    <p class = "prodType 21">Sky</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightPurple"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor sky"></button>
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 22" id="22">
+                <div class = "prodImage 22">
+                    <button class = "addItem 22"></button>
+                    <button class = "favoriteItem 22"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 22">
+                    <p class = "prodHeader 22">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 22">$ 29.99</p>
+                    <p class = "prodType 22">Light Purple</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor lightPurple"></button>    
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 23" id="23">
+                <div class = "prodImage 23">
+                    <button class = "addItem 23"></button>
+                    <button class = "favoriteItem 23"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 23">
+                    <p class = "prodHeader 23">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 23">$ 24.99</p>
+                    <p class = "prodType 23">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor lightPurple"></button> 
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 24" id="24">
+                <div class = "prodImage 24">
+                    <button class = "addItem 24"></button>
+                    <button class = "favoriteItem 24"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 24">
+                    <p class = "prodHeader 24">Relaxed-fit Hoodie</p>
+                    <p class = "prodPrice 24">$ 24.99</p>
+                    <p class = "prodType 24">Baby Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor lightPurple"></button> 
+                        <button class ="prodColor black"></button> 
+                        <button class ="prodColor white"></button>    
+                        <p class ="prodColorCount">+10</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 25" id="25">
+                <div class = "prodImage 25">
+                    <button class = "addItem 25"></button>
+                    <button class = "favoriteItem 25"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 25">
+                    <p class = "prodHeader 25">Relaxed Fit Sweatshirt</p>
+                    <p class = "prodPrice 25">$ 14.99</p>
+                    <p class = "prodType 25">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightPurple"></button>
+                        <button class ="prodColor lightGray"></button>         
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor navy"></button>       
+                        <p class ="prodColorCount">+3</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 26" id="26">
+                <div class = "prodImage 26">
+                    <button class = "addItem 26"></button>
+                    <button class = "favoriteItem 26"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 26">
+                    <p class = "prodHeader 26">Relaxed Fit Sweatshirt</p>
+                    <p class = "prodPrice 26">$ 14.99</p>
+                    <p class = "prodType 26">Light Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightGray"></button>         
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor navy"></button>
+                        <button class ="prodColor lightPurple"></button>
+                        <p class ="prodColorCount">+3</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 27" id="27">
+                <div class = "prodImage 27">
+                    <button class = "addItem 27"></button>
+                    <button class = "favoriteItem 27"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 27">
+                    <p class = "prodHeader 27">Relaxed Fit Sweatshirt</p>
+                    <p class = "prodPrice 27">$ 19.99</p>
+                    <p class = "prodType 27">Aqua/White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor orange"></button>
+                        <button class ="prodColor lightPurple"></button>         
+                        <button class ="prodColor white"></button>        
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 28" id="28">
+                <div class = "prodImage 28">
+                    <button class = "addItem 28"></button>
+                    <button class = "favoriteItem 28"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 28">
+                    <p class = "prodHeader 28">Relaxed Fit Sweatshirt</p>
+                    <p class = "prodPrice 28">$ 14.99</p>
+                    <p class = "prodType 28">Pink</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor navy"></button>
+                        <button class ="prodColor lightPurple"></button> 
+                        <button class ="prodColor lightGray"></button>    
+                        <p class ="prodColorCount">+3</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 29" id="29">
+                <div class = "prodImage 29">
+                    <button class = "addItem 29"></button>
+                    <button class = "favoriteItem 29"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 29">
+                    <p class = "prodHeader 29">Regular Fit Hoodie</p>
+                    <p class = "prodPrice 29">$ 34.99</p>
+                    <p class = "prodType 29">Black/Graphic</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor lightBlue"></button>         
+                        <button class ="prodColor pink"></button>
+                        <button class ="prodColor lightPurple"></button>    
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 30" id="30">
+                <div class = "prodImage 30">
+                    <button class = "addItem 30"></button>
+                    <button class = "favoriteItem 30"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 30">
+                    <p class = "prodHeader 30">Regular Fit Hoodie</p>
+                    <p class = "prodPrice 30">$ 34.99</p>
+                    <p class = "prodType 30">Tan/Graphic</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightBlue"></button>         
+                        <button class ="prodColor pink"></button>
+                        <button class ="prodColor lightPurple"></button>
+                        <button class ="prodColor black"></button>        
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 31" id="31">
+                <div class = "prodImage 31">
+                    <button class = "addItem 31"></button>
+                    <button class = "favoriteItem 31"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 31">
+                    <p class = "prodHeader 31">Regular Fit Hoodie</p>
+                    <p class = "prodPrice 31">$ 34.99</p>
+                    <p class = "prodType 31">Pink/Graphic</p>
+
+                    <div class = "allProdColor">         
+                        <button class ="prodColor pink"></button>
+                        <button class ="prodColor lightPurple"></button>
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor lightBlue"></button>
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 32" id="32">
+                <div class = "prodImage 32">
+                    <button class = "addItem 32"></button>
+                    <button class = "favoriteItem 32"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 32">
+                    <p class = "prodHeader 32">Regular Fit Hoodie</p>
+                    <p class = "prodPrice 32">$ 34.99</p>
+                    <p class = "prodType 32">Maroon/Graphic</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightPurple"></button>
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor lightBlue"></button> 
+                        <button class ="prodColor pink"></button>      
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 33" id="33">
+                <div class = "prodImage 33">
+                    <button class = "addItem 33"></button>
+                    <button class = "favoriteItem 33"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 33">
+                    <p class = "prodHeader 33">Slim Fit Suit Pants</p>
+                    <p class = "prodPrice 33">$ 34.99</p>
+                    <p class = "prodType 33">Dark Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkGray"></button>
+                        <button class ="prodColor navy"></button>         
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor lightGray"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 34" id="34">
+                <div class = "prodImage 34">
+                    <button class = "addItem 34"></button>
+                    <button class = "favoriteItem 34"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 34">
+                    <p class = "prodHeader 34">Slim Fit Suit Pants</p>
+                    <p class = "prodPrice 34">$ 34.99</p>
+                    <p class = "prodType 34">Light Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor navy"></button>         
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor lightGray"></button> 
+                        <button class ="prodColor darkGray"></button>    
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 35" id="35">
+                <div class = "prodImage 35">
+                    <button class = "addItem 35"></button>
+                    <button class = "favoriteItem 35"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 35">
+                    <p class = "prodHeader 35">Slim Fit Suit Pants</p>
+                    <p class = "prodPrice 35">$ 34.99</p>
+                    <p class = "prodType 35">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor lightGray"></button> 
+                        <button class ="prodColor darkGray"></button>  
+                        <button class ="prodColor navy"></button>       
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 36" id="36">
+                <div class = "prodImage 36">
+                    <button class = "addItem 36"></button>
+                    <button class = "favoriteItem 36"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 36">
+                    <p class = "prodHeader 36">Slim Fit Suit Pants</p>
+                    <p class = "prodPrice 36">$ 34.99</p>
+                    <p class = "prodType 36">Navy</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightGray"></button> 
+                        <button class ="prodColor darkGray"></button>  
+                        <button class ="prodColor navy"></button>  
+                        <button class ="prodColor brown"></button>     
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 37" id="37">
+                <div class = "prodImage 37">
+                    <button class = "addItem 37"></button>
+                    <button class = "favoriteItem 37"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 37">
+                    <p class = "prodHeader 37">Slim Fit Crop Slacks</p>
+                    <p class = "prodPrice 37">$ 24.99</p>
+                    <p class = "prodType 37">Gray/Plaid</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor gray"></button>
+                        <button class ="prodColor orange"></button>         
+                        <button class ="prodColor black"></button> 
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 38" id="38">
+                <div class = "prodImage 38">
+                    <button class = "addItem 38"></button>
+                    <button class = "favoriteItem 38"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 38">
+                    <p class = "prodHeader 38">Slim Fit Crop Slacks</p>
+                    <p class = "prodPrice 38">$ 29.99</p>
+                    <p class = "prodType 38">Dark Gray/Plaid</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor orange"></button>         
+                        <button class ="prodColor black"></button> 
+                        <button class ="prodColor gray"></button>       
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 39" id="39">
+                <div class = "prodImage 39">
+                    <button class = "addItem 39"></button>
+                    <button class = "favoriteItem 39"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 39">
+                    <p class = "prodHeader 39">Slim Fit Crop Slacks</p>
+                    <p class = "prodPrice 39">$ 24.99</p>
+                    <p class = "prodType 39">Black/Plaid</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button> 
+                        <button class ="prodColor gray"></button>
+                        <button class ="prodColor orange"></button>     
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 40" id="40">
+                <div class = "prodImage 40">
+                    <button class = "addItem 40"></button>
+                    <button class = "favoriteItem 40"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 40">
+                    <p class = "prodHeader 40">Skinny Fit Suit Pants</p>
+                    <p class = "prodPrice 40">$ 34.99</p>
+                    <p class = "prodType 40">Maroon</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor navy"></button>         
+                        <button class ="prodColor gray"></button>
+                        <button class ="prodColor beige"></button>       
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 41" id="41">
+                <div class = "prodImage 41">
+                    <button class = "addItem 41"></button>
+                    <button class = "favoriteItem 41"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 41">
+                    <p class = "prodHeader 41">Regular Tapered Jeans</p>
+                    <p class = "prodPrice 41">$ 29.99</p>
+                    <p class = "prodType 41">Light Denim Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor blue"></button>               
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 42" id="42">
+                <div class = "prodImage 42">
+                    <button class = "addItem 42"></button>
+                    <button class = "favoriteItem 42"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 42">
+                    <p class = "prodHeader 42">Slim Tapered Jeans</p>
+                    <p class = "prodPrice 42">$ 39.99</p>
+                    <p class = "prodType 42">Light Denim Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor blue"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 43" id="43">
+                <div class = "prodImage 43">
+                    <button class = "addItem 43"></button>
+                    <button class = "favoriteItem 43"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 43">
+                    <p class = "prodHeader 43">Slim Jeans</p>
+                    <p class = "prodPrice 43">$ 19.99</p>
+                    <p class = "prodType 43">Denim Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor navy"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor blue"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 44" id="44">
+                <div class = "prodImage 44">
+                    <button class = "addItem 44"></button>
+                    <button class = "favoriteItem 44"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 44">
+                    <p class = "prodHeader 44">Regular Jeans</p>
+                    <p class = "prodPrice 44">$ 29.99</p>
+                    <p class = "prodType 44">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor navy"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor blue"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 45" id="45">
+                <div class = "prodImage 45">
+                    <button class = "addItem 45"></button>
+                    <button class = "favoriteItem 45"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 45">
+                    <p class = "prodHeader 45">Regular Fit Joggers</p>
+                    <p class = "prodPrice 45">$ 24.99</p>
+                    <p class = "prodType 45">Pastel Navy</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor olive"></button>         
+                        <button class ="prodColor beige"></button>        
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 46" id="46">
+                <div class = "prodImage 46">
+                    <button class = "addItem 46"></button>
+                    <button class = "favoriteItem 46"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 46">
+                    <p class = "prodHeader 46">Regular Fit Joggers</p>
+                    <p class = "prodPrice 46">$ 24.99</p>
+                    <p class = "prodType 46">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor olive"></button>         
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor black"></button>      
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 47" id="47">
+                <div class = "prodImage 47">
+                    <button class = "addItem 47"></button>
+                    <button class = "favoriteItem 47"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 47">
+                    <p class = "prodHeader 47">Regular Fit Joggers</p>
+                    <p class = "prodPrice 47">$ 24.99</p>
+                    <p class = "prodType 47">Brown</p>
+
+                    <div class = "allProdColor">      
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor black"></button>   
+                        <button class ="prodColor olive"></button>    
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec1 48" id="48">
+                <div class = "prodImage 48">
+                    <button class = "addItem 48"></button>
+                    <button class = "favoriteItem 48"></button>
+                </div>
+
+                <div class = "prodTextBox sec1 48">
+                    <p class = "prodHeader 48">Regular Fit Joggers</p>
+                    <p class = "prodPrice 48">$ 17.99</p>
+                    <p class = "prodType 48">Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor gray"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor brown"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+        </div> 
+    </div>
+
+
+
+<!--               showAllProd1 (mens)             -        section17              -->
+    <div class ="showAllProd section 1">
+
+        <div class="showAllProd container 1">
+            <p class = "numProdShown 1"> <span class="upperCase">Showing</span> 32 of 48 Items</p>
+            <div class = "prodShownProgBar 1">
+                <div class = "shownProgress 1"></div>
+            </div>
+            <button class = "showMoreBtn 1">Load More Products</button>
+        </div>
+
+    </div>
+
+
+<!--            wmnShirtInfo              -           section18              -->
+    <div class ="wmnInfo section">
+
+        <div class="wmnShirtInfo sectInfoCont 2">
+            <h1 class = "wmnInfo sectInfoHeader 2">Women's</h1>
+            <p class = "wmnInfo sectInfoDesc 2">Browse our entire selection of women's clothing at H&M. From everyday staples to standout pieces, we have something to suit every occasion. Mix and match casual looks, like jersey tops and printed t-shirts, with jeans or relaxed pants. Going out out? Style up bodysuits with a statement skirt and your favorite heels and you’ll be good to go. Choose from a range of colors, prints and patterns below.</p>
+        </div>
+
+    </div>
+
+
+<!--            womenProdGrid           -           section19               -->
+    <div class ="womenProd section">
+
+        <div class="productGrid container 2">
+            <div class ="prodCont sec2 1" id="49">
+                <div class = "prodImage sec2 1">
+                    <button class = "addItem sec2 1"></button>
+                    <button class = "favoriteItem sec2 1"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 1">
+                    <p class = "prodHeader sec2 1">Wide-cut Cotton T-shirt</p>
+                    <p class = "prodPrice sec2 1">$ 9.99</p>
+                    <p class = "prodType sec2 1">White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor lightGray"></button>                
+                        <p class ="prodColorCount">+3</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 2" id="50">
+                <div class = "prodImage sec2 2">
+                    <button class = "addItem sec2 2"></button>
+                    <button class = "favoriteItem sec2 2"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 2">
+                    <p class = "prodHeader sec2 2">Crop Top</p>
+                    <p class = "prodPrice sec2 2">$ 9.99</p>
+                    <p class = "prodType sec2 2">White/Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor pink"></button>      
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 3" id="51">
+                <div class = "prodImage sec2 3">
+                    <button class = "addItem sec2 3"></button>
+                    <button class = "favoriteItem sec2 3"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 3">
+                    <p class = "prodHeader sec2 3">Crop Top</p>
+                    <p class = "prodPrice sec2 3">$ 4.99</p>
+                    <p class = "prodType sec2 3">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor pink"></button>         
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 4" id="52">
+                <div class = "prodImage sec2 4">
+                    <button class = "addItem sec2 4"></button>
+                    <button class = "favoriteItem sec2 4"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 4">
+                    <p class = "prodHeader sec2 4">Wide-cut Cotton T-shirt</p>
+                    <p class = "prodPrice sec2 4">$ 9.99</p>
+                    <p class = "prodType sec2 4">Powder Pink</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor lightGray"></button>
+                        <button class ="prodColor white"></button>
+                        <p class ="prodColorCount">+3</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 5" id="53">
+                <div class = "prodImage sec2 5">
+                    <button class = "addItem sec2 5"></button>
+                    <button class = "favoriteItem sec2 5"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 5">
+                    <p class = "prodHeader sec2 5">Flounce-collared Blouse</p>
+                    <p class = "prodPrice sec2 5">$ 17.99</p>
+                    <p class = "prodType sec2 5">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor pink"></button>         
+                        <button class ="prodColor navy"></button>      
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 6" id="54">
+                <div class = "prodImage sec2 6">
+                    <button class = "addItem sec2 6"></button>
+                    <button class = "favoriteItem sec2 6"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 6">
+                    <p class = "prodHeader sec2 6">Flounce-collared Blouse</p>
+                    <p class = "prodPrice sec2 6">$ 17.99</p>
+                    <p class = "prodType sec2 6">Black/Floral</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor pink"></button>         
+                        <button class ="prodColor navy"></button>      
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 7" id="55">
+                <div class = "prodImage sec2 7">
+                    <button class = "addItem sec2 7"></button>
+                    <button class = "favoriteItem sec2 7"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 7">
+                    <p class = "prodHeader sec2 7">Flounce-collared Blouse</p>
+                    <p class = "prodPrice sec2 7">$ 19.99</p>
+                    <p class = "prodType sec2 7">White/Floral</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor sky"></button>             
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 8" id="56">
+                <div class = "prodImage sec2 8">
+                    <button class = "addItem sec2 8"></button>
+                    <button class = "favoriteItem sec2 8"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 8">
+                    <p class = "prodHeader sec2 8">Balloon-sleeved Blouse</p>
+                    <p class = "prodPrice sec2 8">$ 24.99</p>
+                    <p class = "prodType sec2 8">Light Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor brown"></button>         
+                        <button class ="prodColor black"></button>                
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+
+            <div class ="prodCont sec2 9" id="57">
+                <div class = "prodImage sec2 9">
+                    <button class = "addItem sec2 9"></button>
+                    <button class = "favoriteItem sec2 9"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 9">
+                    <p class = "prodHeader sec2 9">Oversized Cotton Shirt</p>
+                    <p class = "prodPrice sec2 9">$ 17.99</p>
+                    <p class = "prodType sec2 9">Light Blue/Striped</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor sky"></button>       
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 10" id="58">
+                <div class = "prodImage sec2 10">
+                    <button class = "addItem sec2 10"></button>
+                    <button class = "favoriteItem sec2 10"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 10">
+                    <p class = "prodHeader sec2 10">Oversized Cotton Shirt</p>
+                    <p class = "prodPrice sec2 10">$ 29.99</p>
+                    <p class = "prodType sec2 10">White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button> 
+                        <p class ="prodColorCount"></button>
+                    </div> 
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 11" id="59">
+                <div class = "prodImage sec2 11">
+                    <button class = "addItem sec2 11"></button>
+                    <button class = "favoriteItem sec2 11"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 11">
+                    <p class = "prodHeader sec2 11">Twill Shirt Jacket</p>
+                    <p class = "prodPrice sec2 11">$ 39.99</p>
+                    <p class = "prodType sec2 11">White/Gray Plaid</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor darkGray"></button>         
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 12" id="60">
+                <div class = "prodImage sec2 12">
+                    <button class = "addItem sec2 12"></button>
+                    <button class = "favoriteItem sec2 12"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 12">
+                    <p class = "prodHeader sec2 12">Crop Shirt</p>
+                    <p class = "prodPrice sec2 12">$ 19.99</p>
+                    <p class = "prodType sec2 12">Dark Brown/Floral</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor brown"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 13" id="61">
+                <div class = "prodImage sec2 13">
+                    <button class = "addItem sec2 13"></button>
+                    <button class = "favoriteItem sec2 13"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 13">
+                    <p class = "prodHeader sec2 13">Oversized Shirt</p>
+                    <p class = "prodPrice sec2 13">$ 29.99</p>
+                    <p class = "prodType sec2 13">Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor blue"></button>
+                        <button class ="prodColor black"></button>    
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 14" id="62">
+                <div class = "prodImage sec2 14">
+                    <button class = "addItem sec2 14"></button>
+                    <button class = "favoriteItem sec2 14"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 14">
+                    <p class = "prodHeader sec2 14">Cotton Twill Jacket</p>
+                    <p class = "prodPrice sec2 14">$ 39.99</p>
+                    <p class = "prodType sec2 14">Light Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor black"></button>            
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 15" id="63">
+                <div class = "prodImage sec2 15">
+                    <button class = "addItem sec2 15"></button>
+                    <button class = "favoriteItem sec2 15"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 15">
+                    <p class = "prodHeader sec2 15">Cotton Twill Jacket</p>
+                    <p class = "prodPrice sec2 15">$ 39.99</p>
+                    <p class = "prodType sec2 15">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>  
+                        <button class ="prodColor beige"></button>                                     
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 16" id="64">
+                <div class = "prodImage sec2 16">
+                    <button class = "addItem sec2 16"></button>
+                    <button class = "favoriteItem sec2 16"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 16">
+                    <p class = "prodHeader sec2 16">Cotton Twill Jacket</p>
+                    <p class = "prodPrice sec2 16">$ 29.99</p>
+                    <p class = "prodType sec2 16">White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>            
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 17" id="65">
+                <div class = "prodImage sec2 17">
+                    <button class = "addItem sec2 17"></button>
+                    <button class = "favoriteItem sec2 17"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 17">
+                    <p class = "prodHeader sec2 17">Hooded Jacket</p>
+                    <p class = "prodPrice sec2 17">$ 19.99</p>
+                    <p class = "prodType sec2 17">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor olive"></button>            
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 18" id="66">
+                <div class = "prodImage sec2 18">
+                    <button class = "addItem sec2 18"></button>
+                    <button class = "favoriteItem sec2 18"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 18">
+                    <p class = "prodHeader sec2 18">Hooded Jacket</p>
+                    <p class = "prodPrice sec2 18">$ 19.99</p>
+                    <p class = "prodType sec2 18">Olive</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor olive"></button>
+                        <button class ="prodColor black"></button>                     
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 19" id="67">
+                <div class = "prodImage sec2 19">
+                    <button class = "addItem sec2 19"></button>
+                    <button class = "favoriteItem sec2 19"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 19">
+                    <p class = "prodHeader sec2 19">Oversized Hooded Jacket</p>
+                    <p class = "prodPrice sec2 19">$ 29.99</p>
+                    <p class = "prodType sec2 19">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightPurple"></button>
+                        <button class ="prodColor sky"></button>         
+                        <button class ="prodColor beige"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 20" id="68">
+                <div class = "prodImage sec2 20">
+                    <button class = "addItem sec2 20"></button>
+                    <button class = "favoriteItem sec2 20"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 20">
+                    <p class = "prodHeader sec2 20">Oversized Hooded Jacket</p>
+                    <p class = "prodPrice sec2 20">$ 29.99</p>
+                    <p class = "prodType sec2 20">Sky</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor sky"></button>         
+                        <button class ="prodColor beige"></button>  
+                        <button class ="prodColor lightPurple"></button>      
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 21" id="69">
+                <div class = "prodImage sec2 21">
+                    <button class = "addItem sec2 21"></button>
+                    <button class = "favoriteItem sec2 21"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 21">
+                    <p class = "prodHeader sec2 21">Hoodie</p>
+                    <p class = "prodPrice sec2 21">$ 17.99</p>
+                    <p class = "prodType sec2 21">White/Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor lightGray"></button>
+                        <button class ="prodColor darkGray"></button>
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 22" id="70">
+                <div class = "prodImage sec2 22">
+                    <button class = "addItem sec2 22"></button>
+                    <button class = "favoriteItem sec2 22"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 22">
+                    <p class = "prodHeader sec2 22">Hoodie</p>
+                    <p class = "prodPrice sec2 22">$ 17.99</p>
+                    <p class = "prodType sec2 22">Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor lightGray"></button>
+                        <button class ="prodColor darkGray"></button>  
+                        <button class ="prodColor white"></button>      
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 23" id="71">
+                <div class = "prodImage sec2 23">
+                    <button class = "addItem sec2 23"></button>
+                    <button class = "favoriteItem sec2 23"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 23">
+                    <p class = "prodHeader sec2 23">Cotton Hoodie</p>
+                    <p class = "prodPrice sec2 23">$ 29.99</p>
+                    <p class = "prodType sec2 23">Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor blue"></button>      
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 24" id="72">
+                <div class = "prodImage sec2 24">
+                    <button class = "addItem sec2 24"></button>
+                    <button class = "favoriteItem sec2 24"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 24">
+                    <p class = "prodHeader sec2 24">Hoodie</p>
+                    <p class = "prodPrice sec2 24">$ 17.99</p>
+                    <p class = "prodType sec2 24">Light Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightGray"></button>
+                        <button class ="prodColor darkGray"></button>  
+                        <button class ="prodColor white"></button>   
+                        <button class ="prodColor brown"></button>           
+                        <p class ="prodColorCount">+2</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 25" id="73">
+                <div class = "prodImage sec2 25">
+                    <button class = "addItem sec2 25"></button>
+                    <button class = "favoriteItem sec2 25"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 25">
+                    <p class = "prodHeader sec2 25">Printed Sweatshirt</p>
+                    <p class = "prodPrice sec2 25">$ 29.99</p>
+                    <p class = "prodType sec2 25">Black/Graphic</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 26" id="74">
+                <div class = "prodImage sec2 26">
+                    <button class = "addItem sec2 26"></button>
+                    <button class = "favoriteItem sec2 26"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 26">
+                    <p class = "prodHeader sec2 26">Sweatshirt with Printed Design</p>
+                    <p class = "prodPrice sec2 26">$ 29.99</p>
+                    <p class = "prodType sec2 26">Washed Gray</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor gray"></button>
+                        <button class ="prodColor black"></button>         
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 27" id="75">
+                <div class = "prodImage sec2 27">
+                    <button class = "addItem sec2 27"></button>
+                    <button class = "favoriteItem sec2 27"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 27">
+                    <p class = "prodHeader sec2 27">Sweatshirt with Printed Design</p>
+                    <p class = "prodPrice sec2 27">$ 29.99</p>
+                    <p class = "prodType sec2 27">Black/White</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor gray"></button>                         
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 28" id="76">
+                <div class = "prodImage sec2 28">
+                    <button class = "addItem sec2 28"></button>
+                    <button class = "favoriteItem sec2 28"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 28">
+                    <p class = "prodHeader sec2 28">Sweatshirt</p>
+                    <p class = "prodPrice sec2 28">$ 9.99</p>
+                    <p class = "prodType sec2 28">Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor darkGray"></button>                
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 29" id="77">
+                <div class = "prodImage sec2 29">
+                    <button class = "addItem sec2 29"></button>
+                    <button class = "favoriteItem sec2 29"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 29">
+                    <p class = "prodHeader sec2 29">Cropped zip-through hoodie</p>
+                    <p class = "prodPrice sec2 29">$ 19.99</p>
+                    <p class = "prodType sec2 29">Black/Washed out</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkGray"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 30" id="78">
+                <div class = "prodImage sec2 30">
+                    <button class = "addItem sec2 30"></button>
+                    <button class = "favoriteItem sec2 30"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 30">
+                    <p class = "prodHeader sec2 30">Velour Crop Hoodie</p>
+                    <p class = "prodPrice sec2 30">$ 24.99</p>
+                    <p class = "prodType sec2 30">Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor darkGray"></button>
+                        <button class ="prodColor lightPurple"></button>         
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor black"></button>    
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 31" id="79">
+                <div class = "prodImage sec2 31">
+                    <button class = "addItem sec2 31"></button>
+                    <button class = "favoriteItem sec2 31"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 31">
+                    <p class = "prodHeader sec2 31">Velour Crop Hoodie</p>
+                    <p class = "prodPrice sec2 31">$ 24.99</p>
+                    <p class = "prodType sec2 31">Light Purple</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightPurple"></button>         
+                        <button class ="prodColor brown"></button>
+                        <button class ="prodColor black"></button>  
+                        <button class ="prodColor darkGray"></button>     
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 32" id="80">
+                <div class = "prodImage sec2 32">
+                    <button class = "addItem sec2 32"></button>
+                    <button class = "favoriteItem sec2 32"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 32">
+                    <p class = "prodHeader sec2 32">Crop Sweatshirt</p>
+                    <p class = "prodPrice sec2 32">$ 12.99</p>
+                    <p class = "prodType sec2 32">Pink</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor pink"></button>
+                        <button class ="prodColor gray"></button>
+                        <p class ="prodColorCount">+1</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 33" id="81">
+                <div class = "prodImage sec2 33">
+                    <button class = "addItem sec2 33"></button>
+                    <button class = "favoriteItem sec2 33"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 33">
+                    <p class = "prodHeader sec2 33">Slit-hem Flared Pants</p>
+                    <p class = "prodPrice sec2 33">$ 29.99</p>
+                    <p class = "prodType sec2 33">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>        
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 34" id="82">
+                <div class = "prodImage sec2 34">
+                    <button class = "addItem sec2 34"></button>
+                    <button class = "favoriteItem sec2 34"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 34">
+                    <p class = "prodHeader sec2 34">Wide-leg Pull-on Pants</p>
+                    <p class = "prodPrice sec2 34">$ 19.99</p>
+                    <p class = "prodType sec2 34">Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor brown"></button>         
+                        <button class ="prodColor lightGray"></button>
+                        <button class ="prodColor sky"></button> 
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 35" id="83">
+                <div class = "prodImage sec2 35">
+                    <button class = "addItem sec2 35"></button>
+                    <button class = "favoriteItem sec2 35"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 35">
+                    <p class = "prodHeader sec2 35">Knit Pants</p>
+                    <p class = "prodPrice sec2 35">$ 34.99</p>
+                    <p class = "prodType sec2 35">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor pink"></button>         
+                        <button class ="prodColor white"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 36" id="84">
+                <div class = "prodImage sec2 36">
+                    <button class = "addItem sec2 36"></button>
+                    <button class = "favoriteItem sec2 36"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 36">
+                    <p class = "prodHeader sec2 36">Knit Pants</p>
+                    <p class = "prodPrice sec2 36">$ 34.99</p>
+                    <p class = "prodType sec2 36">Pink</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor pink"></button>         
+                        <button class ="prodColor white"></button>    
+                        <button class ="prodColor beige"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 37" id="85">
+                <div class = "prodImage sec2 37">
+                    <button class = "addItem sec2 37"></button>
+                    <button class = "favoriteItem sec2 37"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 37">
+                    <p class = "prodHeader sec2 37">Mom High Ankle Jeans</p>
+                    <p class = "prodPrice sec2 37">$ 29.99</p>
+                    <p class = "prodType sec2 37">Light Denim Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor blue"></button> 
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 38" id="86">
+                <div class = "prodImage sec2 38">
+                    <button class = "addItem sec2 38"></button>
+                    <button class = "favoriteItem sec2 38"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 38">
+                    <p class = "prodHeader sec2 38">Mom High Ankle Jeans</p>
+                    <p class = "prodPrice sec2 38">$ 29.99</p>
+                    <p class = "prodType sec2 38">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor blue"></button> 
+                        <button class ="prodColor sky"></button>
+                        <button class ="prodColor black"></button>             
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 39" id="87">
+                <div class = "prodImage sec2 39">
+                    <button class = "addItem sec2 39"></button>
+                    <button class = "favoriteItem sec2 39"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 39">
+                    <p class = "prodHeader sec2 39">Slim Mom High Ankle Jeans</p>
+                    <p class = "prodPrice sec2 39">$ 24.99</p>
+                    <p class = "prodType sec2 39">Dark Denim Blue</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor blue"></button>
+                        <button class ="prodColor sky"></button>    
+                        <p class ="prodColorCount">+1</button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 40" id="88">
+                <div class = "prodImage sec2 40">
+                    <button class = "addItem sec2 40"></button>
+                    <button class = "favoriteItem sec2 40"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 40">
+                    <p class = "prodHeader sec2 40">Slim Mom High Ankle Jeans</p>
+                    <p class = "prodPrice sec2 40">$ 24.99</p>
+                    <p class = "prodType sec2 40">Light Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor white"></button>         
+                        <button class ="prodColor blue"></button>
+                        <button class ="prodColor sky"></button> 
+                        <button class ="prodColor black"></button>      
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 41" id="89">
+                <div class = "prodImage sec2 41">
+                    <button class = "addItem sec2 41"></button>
+                    <button class = "favoriteItem sec2 41"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 41">
+                    <p class = "prodHeader sec2 41">Flared Leggings</p>
+                    <p class = "prodPrice sec2 41">$ 17.99</p>
+                    <p class = "prodType sec2 41">Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor beige"></button>            
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 42" id="90">
+                <div class = "prodImage sec2 42">
+                    <button class = "addItem sec2 42"></button>
+                    <button class = "favoriteItem sec2 42"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 42">
+                    <p class = "prodHeader sec2 42">Flared Leggings</p>
+                    <p class = "prodPrice sec2 42">$ 17.99</p>
+                    <p class = "prodType sec2 42">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor beige"></button> 
+                        <button class ="prodColor black"></button>   
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 43" id="91">
+                <div class = "prodImage sec2 43">
+                    <button class = "addItem sec2 43"></button>
+                    <button class = "favoriteItem sec2 43"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 43">
+                    <p class = "prodHeader sec2 43">Flared Leggings</p>
+                    <p class = "prodPrice sec2 43">$ 19.99</p>
+                    <p class = "prodType sec2 43">White/Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button> 
+                        <button class ="prodColor beige"></button> 
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus On">New Arrival</p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 44" id="92">
+                <div class = "prodImage sec2 44">
+                    <button class = "addItem sec2 44"></button>
+                    <button class = "favoriteItem sec2 44"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 44">
+                    <p class = "prodHeader sec2 44">Flared Faux Leggings</p>
+                    <p class = "prodPrice sec2 44">$ 24.99</p>
+                    <p class = "prodType sec2 44">Brown</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor brown"></button>         
+                        <button class ="prodColor white"></button>
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 45" id="93">
+                <div class = "prodImage sec2 45">
+                    <button class = "addItem sec2 45"></button>
+                    <button class = "favoriteItem sec2 "></button>
+                </div>
+
+                <div class = "prodTextBox sec2 45">
+                    <p class = "prodHeader sec2 45">A-line Skirt</p>
+                    <p class = "prodPrice sec2 45">$ 17.99</p>
+                    <p class = "prodType sec2 45">Black/White Plaid</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>
+                        <button class ="prodColor brown"></button>         
+                        <button class ="prodColor red"></button>
+                        <button class ="prodColor green"></button>                    
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 46" id="94">
+                <div class = "prodImage sec2 46">
+                    <button class = "addItem sec2 46"></button>
+                    <button class = "favoriteItem sec2 46"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 46">
+                    <p class = "prodHeader sec2 46">Textured-weave Skirt</p>
+                    <p class = "prodPrice sec2 46">$ 34.99</p>
+                    <p class = "prodType sec2 46">Light Beige</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor beige"></button>
+                        <button class ="prodColor brown"></button>         
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 47" id="95">
+                <div class = "prodImage sec2 47">
+                    <button class = "addItem sec2 47"></button>
+                    <button class = "favoriteItem sec2 47"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 47">
+                    <p class = "prodHeader sec2 47">Pleated Skirt</p>
+                    <p class = "prodPrice sec2 47">$ 24.99</p>
+                    <p class = "prodType sec2 47">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor lightGray"></button>
+                        <button class ="prodColor black"></button>         
+                        <button class ="prodColor brown"></button> 
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+            <div class ="prodCont sec2 48" id="96">
+                <div class = "prodImage sec2 48">
+                    <button class = "addItem sec2 48"></button>
+                    <button class = "favoriteItem sec2 48"></button>
+                </div>
+
+                <div class = "prodTextBox sec2 48">
+                    <p class = "prodHeader sec2 48">Faux Leather Skirt</p>
+                    <p class = "prodPrice sec2 48">$ 24.99</p>
+                    <p class = "prodType sec2 48">Black</p>
+
+                    <div class = "allProdColor">
+                        <button class ="prodColor black"></button>  
+                        <p class ="prodColorCount"></button>
+                    </div>  
+                    <p class = "prodStatus Off"></p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+<!--             showAllProd2          -        section20                        -->
+    <div class ="showAllProd section 2">
+
+        <div class="showAllProd container 2">
+            <p class = "numProdShown 2"><span class="upperCase">Showing</span> 32 of 48 Items</p>
+            <div class = "prodShownProgBar 2">
+                <div class = "shownProgress 2"></div>
+            </div>
+            <button class = "showMoreBtn 2">Load More Products</button>
+        </div>
+
+    </div>
+
+<!--              trendingProd      -       section21                                -->
+    <div class ="trendingProd section">
+        <div class="trendingProd container">
+            <p class ="trendProdHeader 1">Trending right now</h2>
+
+            <div class="trendProdNameCont">
+                <button class = "trendProdName 1">White T-Shirts & Tanks For Men</button>
+                <button class = "trendProdName 2">Graphic Sweaters For Women</button>
+                <button class = "trendProdName 3">Maroon Hoodies For Men</button>
+                <button class = "trendProdName 4">Leather Faux Skirts</button>
+                <button class = "trendProdName 5">Navy Plaid Skirts</button>
+                <button class = "trendProdName 6">Distressed Washed Denim</button>
+                <button class = "trendProdName 7">Black Skinny Jeans</button>
+                <button class = "trendProdName 8">Aqua Graphic Sweatshirt</button>
+                <button class = "trendProdName 9">Floral Blouse</button>
+            </div>
+
+            <button class = "showTrendsBtn">Show More (+8)</button>
+        </div>
+    </div>
+
+
+<!--                 Footer             -             Section12                       -->
+    <footer class = "footer 2">
+
+        <section class="ftrMain">
+            <div class="ftrMainItem 1">
+                <h2 class="ftrHeadings">Shop</h2>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Divided</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Baby</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">H&M HOME</a></li>  <!-- shouldn't be uppercased -->
+                    <li><a href="#">Student Discount</a></li>
+                </ul>
+            </div>
+ 
+            <div class="ftrMainItem 2">
+                <h2 class="ftrHeadings">Corporate Info</h2>
+                <ul>
+                    <li><a href="#">Career at H&M</a></li>
+                    <li><a href="#">About H&M</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Corporate Governance</a></li>
+                </ul>
+            </div>
+ 
+            <div class="ftrMainItem 3">
+                <h2 class="ftrHeadings">Help</h2>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Legal & Privacy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                    <li><a href="#">CA Supply Chains Act</a></li>
+                    <li><a href="#">California, Colorado, and Virginia</a></li>
+                    <li><a href="#">Privacy Rights</a></li>
+                    <li><a href="#">Do Not Sell My Personal Information</a></li>
+                    <li><a href="#">Cookie settings</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+ 
+            <div class="ftrMainItem 4">
+                <h2 class="ftrHeadings Member">Become a member</h2>
+                <ul>
+                    <li><a href="#">Join now and get 10% off your next purchase!</a></li>
+                    <h2 class="ftrHeadings readMore">Read More</h2>
+                </ul>
+            </div>
+ 
+        </section>
+
+
+        <div class="socialMediaPlat">
+            <div class="ftrMainItem">
+                <ul class = "socialMediaCont">
+                    <li><a class = "mediaLogo 1" href="#"></a></li>
+                    <li><a class = "mediaLogo 2" href="#"></a></li>
+                    <li><a class = "mediaLogo 3" href="#"></a></li>
+                    <li><a class = "mediaLogo 4" href="#"></a></li>
+                    <li><a class = "mediaLogo 5" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright disclaimer">
+            <div class="ftrMainItem">
+                <ul>
+                    <li><a class = "legalDesc" href="#">The assets used for this site are the property of H&M Hennes & Mauritz AB. All rights are reserved to H&M Hennes & Mauritz AB. I do not claim to own H&M or their content and I am not affiliated with them. This website is for educational purposes only and does not receive revenue in any way. H&M's business concept is to offer fashion and quality at the best price. H&M has since it was founded in 1947 grown into one of the world's leading fashion companies.</a></li>
+                    <button class ="hideLegal">Read Less</button>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="HM Branding">
+            <div class="ftrMainItem">
+                <ul>
+                    <li><a class = "endingLogo" href="#"></a></li>
+                    <li><a href="#">United States | $</a></li>
+                </ul>
+            </div>
+        </div>
+  
+    </footer>
+ 
+    
+</div>      <!--            end of shopGrid                 -->
+
+      <script type="text/javascript" src="hmLite (js).js"></script> 
+ </html>

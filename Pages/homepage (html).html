@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H&M Lite (Home)</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="hmLite (css).css">
+<link href="https://db.onlinewebfonts.com/c/09c8fb44d2c62d99647e4ce58736293e?family=HMSansLatin-Regular" rel="stylesheet" type="text/css"/>
+<body>
+
+<div class= "homePageGrid">    <!--   Entire Structure of Page    -->
+
+    
+    <!--                    Nav Bar    -    Section1                             -->
+    <div class="navBar 1">
+        <nav class = "navbar Banner 1">
+
+            <div class = "topMenuContainer 1">
+                 <div class = "servicesCont 1">
+                    <ul class="services menu 1">
+                        <li class="servicesLink 1"><a href="#" class="servicesLink 1">Customer Service</a></li>
+                        <li class="servicesLink 2"><a href="#" class="servicesLink 2">Student Discount</a></li>
+                        <li class="servicesLink 3"><a href="#" class="servicesLink 3">Find a store</a></li>
+                        
+                        <div class="dropdownDot Icon"></div>   <!-- H&M uses multiple pseudo elements to display icons. I'm using full icons for convenience -->
+                    </ul>
+                </div>
+                <div class = "personalCartCont 1">
+                    <ul class="personalCart menu 2">    <!-- Icon div class isn't included in this menu. This frees line space, increases readibility and fits because all li items have a unique icon. -->
+                        <li class="personalCartLink 1"><a href="#" class="personalCartLink 1">Sign in</a></li>  
+                        <li class="personalCartLink 2"><a href="#" class="personalCartLink 2">Favorites</a></li>
+                        <li class="personalCartLink 3"><a href="#" class="personalCartLink 3">Shopping bag(0)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class = "baseMenuContainer 1">
+                 <div class = "productSectCont 1">
+                    <ul class="productSectMenu">
+                        <li class="productSectLink 1"><a href="#" class="productSectLink 1">Women</a></li>
+                        <li class="productSectLink 2"><a href="#" class="productSectLink 2">Divided</a></li>
+                        <li class="productSectLink 3"><a href="#" class="productSectLink 3">Men</a></li>
+                        <li class="productSectLink 4"><a href="#" class="productSectLink 4">Baby</a></li>
+                        <li class="productSectLink 5"><a href="#" class="productSectLink 5">Kids</a></li>
+                        <li class="productSectLink 6"><a href="#" class="productSectLink 6">H&M Home</a></li>
+                        <li class="productSectLink 7"><a href="#" class="productSectLink 7">Sale</a></li>
+                        <li class="productSectLink 8"><a href="#" class="productSectLink 8">Sustainability</a></li>
+                    </ul>
+
+                </div>
+
+                <div class = "searchProdCont 1">
+                    <ul class="searchProduct menu 3">
+                        <div class="searchLens Icon"></div>
+                        <li class="searchProductLink 1"><input class = "searchProductInput 1" type="text" placeholder="Search products"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+
+
+    <!--          Modal (1)     -  Checkout Cart         -->
+    <div id="modalCheckout" class="modal 1">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 class = "popupHeader"></h2>
+            </div>
+    
+            <div class="modal-body">
+                <div class = "cartContainer">
+                    <div class = "cartBox -1">
+                        <div class = "cartProd-image -1"></div>
+
+                        <div class = "cartTextBox -1">
+                            <p class = "cartProdHeader -1">Your shopping bag is empty</p>
+                            <p class ="cartProdPrice -1">Order value<span class = "textAlignRight">$0.00</span></p>
+                            <p class ="cartProdSale -1"></p>
+                            <p class ="cartProdCount -1"></p>
+                            <p class ="cartProdColor -1">Total <span class = "textAlignRight">$0.00</span></p>
+                            <p class ="cartProdSize -1"></p>
+                        </div>
+
+                        <div class = "discountBtnDiv">
+                            <button class = "discountBtn 1">10%</button>
+                            <button class = "discountBtn 2">15%</button>
+                            <button class = "discountBtn 3">40%</button>
+                        </div>
+
+                        <div class = "addProd -1">
+                            <select class='addProdDropdown -1'>
+                                <option class = "selectProdNum">1</option>
+                                <option class = "selectProdNum">2</option>
+                                <option class = "selectProdNum">3</option>
+                            </select>
+                        </div>
+
+                        <button class = "deleteProd -1">
+                            <svg xmlns="http://www.w3.org/2000/svg" 
+                                role="img" 
+                                width="1em" 
+                                height="1em" 
+                                preserveAspectRatio="xMidYMid meet" 
+                                viewBox="0 0 24 24">
+                            <g class="icon-tabler" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 7h16"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12"/><path d="M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"/></g></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+
+
+    <!--          Modal (2)     -  Favorites         -->
+    <div id="modalFavorites" class="modal 2">
+
+        <div class="modal-content 2">
+            <div class="modal-header 2">
+                <span class="close">&times;</span>
+                <h2 class = "popupHeader"></h2>
+            </div>
+    
+            <div class="modal-body">
+                <div class = "favoriteCont">
+                    <div class = "favoriteHeaderCont">
+                        <h3 class = "favHeader">Favorites</h3>
+
+                        <div class = "soldOutCont">
+                            <div class = "soldHeader">Save your favorite items</div>
+                            <div class = "soldDesc">Want to save the items you love? Just click on the heart icon found on the product image and it will show up here.</div> <!-- alt One or more of your favorites are sold out, but you can always try to find the, in a store near you.-->
+                            <button class = "soldClose">Browse Now</button>
+                        </div>
+                    </div>
+
+                    <div class ="favProdGrid section">
+                        <div class ="productGrid container 3">
+                            <div class ="prodCont fav 0">
+                                <div class = "prodImage fav 0">
+                                    <button class = "deleteItem 0">
+                                        <svg class="trashIcon" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                            <path fill-rule="evenodd" d="M14 4v1h-1v10.455c0 .3-.224.545-.5.545h-11c-.276 0-.5-.244-.5-.545V5H0V4h14zm-2 1v10H2V5h10zM9.5 0a.5.5 0 01.5.5V2h4v1H0V2h4V.5a.5.5 0 01.5-.5h5zM9 1H5v1h4V1zM5 8h1v4H5V8zm3 0h1v4H8V8z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class = "prodTextBox fav 0">
+                                    <p class = "prodHeader fav 0">Regular Fit Crew-neck T-shirt</p>
+                                    <p class = "prodPrice fav 0">$ 6.99</p>
+                                    <p class = "prodType fav 0">Dark Beige</p>
+                                </div>
+
+                                <div class = "selectSize 0">
+                                    <button class = "openSize 0">
+                                        <p class = "selectHeader 0">Select size</p>
+                                        <div class = "dropIcon 0"></div>
+                                    </button>
+
+                                    <div class ="filtContainer fav 0">
+                                        <button class ="sortSetting fav 1">
+                                            <div class = "checkBox fav 1"></div>
+                                            <p class = "settingName fav 1">XS</p>
+                                        </button>
+                                        <button class ="sortSetting fav 2">
+                                            <div class = "checkBox fav 2"></div>
+                                            <p class = "settingName fav 2">S</p>
+                                        </button>
+                                        <button class ="sortSetting fav 3">
+                                            <div class = "checkBox fav 3"></div>
+                                            <p class = "settingName fav 3">M</p>
+                                        </button>
+                                        <button class ="sortSetting fav 4">
+                                            <div class = "checkBox fav 4"></div>
+                                            <p class = "settingName fav 4">L</p>
+                                        </button>
+
+                                    </div>
+                                </div>
+
+                                <button class = "addFavCartBtn 0">
+                                    <svg class="bagIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false">
+                                        <path d="M12 .1c2.9 0 4.9 1.4 4.9 3.8v.6h3.8v5.1c0 4.7 2.1 13.3.5 13.3-.7 0-5 1.1-9.2 1.1-4.6 0-9.2-1.1-9.2-1.1 -1.5 0 .5 
+                                        -8.7.5-13.3V4.4h3.8v-.6c0-2.4 2-3.7 4.9-3.7zm7.6 5.4h-2.7v2.2h-1.1V5.5H8.2v2.2H7.1V5.5H4.4v4c0 1.3-.1 2.9-.4 5.3l-.1.9c-.4 3-.5 
+                                        3.9-.5 5v1.2c.8.1 1.6.3 2.4.4 2.1.3 4.2.5 6.1.5h.5c1.6 0 3.3-.2 5.2-.5.2 0 2-.4 2.9-.5v-1.4c0-1-.2-1.9-.5-4.7 0-.3-.1-.6-.1-.9-.3-2.4-.4-4-.4-5.3v-4zM12 
+                                        1.2c-2.3 0-3.8 1-3.8 2.6v.6h7.6v-.6c0-1.7-1.5-2.6-3.8-2.6z">
+                                        </path>
+                                    </svg>
+
+                                    <p class = "addBagDesc 0">Add to Bag</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+<!--                    Sidebar         -  Section2     (not included in homepage)                         -->
+
+
+
+<!--                reminder      -    Section3                         -->
+    <div class ="reminder section">
+
+        <div class="reminder container">
+            <div class = "reminderTextWrap">
+                <li class = "remindLi 1"><a href="#" class="remindBtn 1"><pre>
+                        Free shipping over $40: Select Expedited, 
+                        Standard Ship to Store or UPS Access Point™ at 
+                        checkout</pre></a></li>
+
+                <li class = "remindLi 2"><a href="#" class="remindBtn 2">Become a Loyalty Member: Join for Free!</a></li>
+                <li class = "remindLi 3"><a href="#" class="remindBtn 3">Gift Card</a></li>
+            </div>
+        </div>
+
+    </div>
+
+
+<!--            saleBanner          -      Section4                      -->
+    <div class ="saleBanner section">
+
+        <div class="saleBanner container">
+            <button class = "invisibleBtn 1">
+                <div class = "sale bannerWrap">
+                    <p class = "sale bannerHeader">Fall Sale: new markdowns added!</p>
+                    <div class = "moreInfoBtn 1"></div>
+                </div>
+            </button>
+        </div>
+
+    </div>
+
+
+
+<!--           featOpener             -        Section5           -->
+    <div class ="featOpener section">
+
+        <div class="featOpener container">
+            <div class="autumnLanding Image">
+
+                <div class = "photoTextWrap 1">
+                    <h3 class = "featOpener photoHeader">Introducing Autumn/Winter 2021</h3>
+                    <p class = "featOpener photoDesc">Embrace every fall cliché & start layering like a pro</p>                <!-- H&M uses h3 tags without using h1 tags. I'll do the same but know semantics suggets not to -->
+                    <div class = "featOpener photoBtn"><a href="#" class = "featOpener photoBtn">Shop Now</a></div>
+                </div>
+            </div>  
+        </div>
+
+    </div>
+
+
+
+<!--                trendNowProdSect            -        Section6            -->
+    <div class ="trendingNow section">
+        <p class = "trendNowHeader">Trending right now</p>
+
+        <div class = "trendingNow container">
+            <div class = "trendProdBox 1">
+                <div class="trendProd Image 1"></div>
+                <p class = "trendHeader prodText 1">Men</p>               
+                <p class = "trendDesc prodText 1">Hoodies & Sweatshirts</p>               
+            </div>
+            <div class = "trendProdBox 2">
+                <div class="trendProd Image 2"></div>
+                <p class = "trendHeader prodText 2">Women</p>               
+                <p class = "trendDesc prodText 2">Cardigans & Sweaters</p>               
+            </div>
+            <div class = "trendProdBox 3">
+                <div class="trendProd Image 3"></div>
+                <p class = "trendHeader prodText 3">Women</p>               
+                <p class = "trendDesc prodText 3">Shirts & Tops</p>               
+            </div>
+            <div class = "trendProdBox 4">
+                <div class="trendProd Image 4"></div>
+                <p class = "trendHeader prodText 4">Men</p>               
+                <p class = "trendDesc prodText 4">T-shirts & Basics</p>               
+            </div>
+            <div class = "trendProdBox 5">
+                <div class="trendProd Image 5"></div>
+                <p class = "trendHeader prodText 5">Men</p>               
+                <p class = "trendDesc prodText 5">Pants</p>               
+            </div>
+            <div class = "trendProdBox 6">
+                <div class="trendProd Image 6"></div>
+                <p class = "trendHeader prodText 6">Women</p>               
+                <p class = "trendDesc prodText 6">Pants</p>               
+            </div>
+        </div>
+
+    </div>
+    
+ 
+ 
+<!--            memberAdv            -          section7                -->
+    <div class ="memberAdv section">
+
+        <div class="memberAdv container">
+            <div class = "memberAdv itemWrap">
+                <button class = "invisibleBtn 2">
+                    <div class = "memberAdv bannerWrap">
+                        <p class = "memberAdv bannerHeader">Let us upgrade you! Become an H&M Member & get 10% off your first purchase + rewards just for shopping</p>
+                        <p class = "memberAdv bannerText">Don't forget to opt into Fashion News to have offers and rewards right to your inbox!</p>
+                    </div>
+
+                    <div class = "moreInfoBtn 2">i</div>
+                </button>
+            </div>
+        </div>
+
+    </div>
+   
+
+
+<!--            denimUpdate           -         section8              -->
+    <div class ="denimUpdate section">
+
+        <div class="denimUpdate container">
+            
+            <div class="denimOutfit Image">
+                <div class = "photoTextWrap 2">
+                    <h3 class = "denimUpdate photoHeader">Denim update</h3>
+                    <p class = "denimUpdate photoDesc">New flattering fits to wear on repeat</p>               
+
+                    <div class = "denimUpdate photoBtn"><a href="#" class="denimUpdate photoBtn">Shop Now</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  
+
+
+<!--           hmHomeLove           -       section9                -->
+    <div class ="hmHomeLove section">
+
+        <div class="hmHomeLove container">
+
+            <div class="hmHomeLove Image">
+                <div class="nameArtOverlay Image"></div>
+
+                <div class = "photoTextWrap 3">
+                    <p class = "hmHomeLove photoDesc">Discover our collaboration with three vibrant artists - coming soon!</p>               
+                    <div class = "hmHomeLove photoBtn"><a href="#" class="hmHomeLove photoBtn">View Collection</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+ 
+
+
+<!--         hmMagazine              -      section10                   -->
+    <div class = "hmMagazine section">
+
+        <div class= "hmMagazine container">
+            <div class = "zineTextWrap">
+                <h2 class = "hmZineHeader">Magazine</h2> 
+                <p class = "hmZineDesc">A World of Inspiration</p>                   
+                <div class = "hmMagazineBtn"><a href="#" class="hmMagazineBtn">Read H&M Magazine</a></div>
+            </div>
+
+
+            <div class = "magazineModule">
+
+                <div class = "storyContainer 1">
+                    <div class="storyImage 1"></div>
+                    <div class = "storyOverlayBtn 1"><a href="#" class="storyOverlayBtn 1">
+
+                        <div class = "zine storyTextWrap 1">
+                            <p class = "magazine storyHeader 1">Inside H&M</p>     
+                            <p class = "magazine storyDesc 1">Presenting: Edition by John Boyega</p>               
+                            <div class = "magazine storyBtn 1"><a href="#" class="magazine storyBtn 1">Read The Story</a></div>
+                        </div>
+                    </a></div>
+                </div>
+
+                <div class = "storyContainer 2">
+                    <div class="storyImage 2"></div>
+                    <div class = "storyOverlayBtn 2"><a href="#" class="storyOverlayBtn 2">
+
+                        <div class = "zine storyTextWrap 2">
+                            <p class = "magazine storyHeader 2">Inside H&M</p>     
+                            <p class = "magazine storyDesc 2">Designed by</p>               
+                            <div class = "magazine storyBtn 2"><a href="#" class="magazine storyBtn 2">Read The Story</a></div>
+                        </div>
+                    </a></div>
+                </div>
+
+                <div class = "storyContainer 3">
+                    <div class="storyImage 3"></div>
+
+                    <div class = "storyOverlayBtn 3"><a href="#" class="storyOverlayBtn 3">
+                        <div class = "zine storyTextWrap 3">
+                            <p class = "magazine storyHeader 3">Inside H&M</p>     
+                            <p class = "magazine storyDesc 3">Coming this spring: Iris Apfel x H&M</p>               
+                            <div class = "magazine storyBtn 3"><a href="#" class="magazine storyBtn 3">Read The Story</a></div>
+                        </div>
+                    </a></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+   
+
+    
+
+<!--             emptyDivider                -         Section11                    -->  
+     <div class ="emptyDivider section">
+        <div class="emptyDivider container"></div>
+    </div>
+
+           
+<!--               Footer        -        Section12                         -->
+    <footer class = "footer 1">
+
+        <section class="ftrMain">
+            <div class="ftrMainItem 1">
+                <h2 class="ftrHeadings">Shop</h2>
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Divided</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Baby</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">H&M Home</a></li> 
+                    <li><a href="#">Student Discount</a></li>
+                </ul>
+            </div>
+ 
+            <div class="ftrMainItem 2">
+                <h2 class="ftrHeadings">Corporate Info</h2>
+                <ul>
+                    <li><a href="#">Career at H&M</a></li>
+                    <li><a href="#">About H&M</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Press</a></li>
+
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Corporate Governance</a></li>
+                </ul>
+             </div>
+ 
+            <div class="ftrMainItem 3">
+                <h2 class="ftrHeadings">Help</h2>
+                <ul>
+                    <li><a href="#">Customer Service</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Legal & Privacy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gift Card</a></li>
+                    <li><a href="#">CA Supply Chains Act</a></li>
+                    <li><a href="#">California, Colorado, and Virginia</a></li>
+                    <li><a href="#">Privacy Rights</a></li>
+                    <li><a href="#">Do Not Sell My Personal Information</a></li>
+                    <li><a href="#">Cookie settings</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+
+            <div class="ftrMainItem 4">
+                <h2 class="ftrHeadings">Become a member</h2>
+                <ul>
+                    <li><a href="#">Join now and get 10% off your next purchase!</a></li>
+                    <h2 class="ftrHeadings">Read More</h2>
+                </ul>
+            </div>
+        </section>
+
+
+        <div class="socialMediaPlat">
+            <div class="ftrMainItem">
+                <ul class = "socialMediaCont">
+                    <li><a class = "mediaLogo 1" href="#"></a></li>
+                    <li><a class = "mediaLogo 2" href="#"></a></li>
+                    <li><a class = "mediaLogo 3" href="#"></a></li>
+                    <li><a class = "mediaLogo 4" href="#"></a></li>
+                    <li><a class = "mediaLogo 5" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright disclaimer">
+            <div class="ftrMainItem">
+                <ul>
+                    <li><a class = "legalDesc" href="#">The assets used for this site are the property of H&M Hennes & Mauritz AB. All rights are reserved to H&M Hennes & Mauritz AB. I do not claim to own H&M or their content and I am not affiliated with them. This website is for educational purposes only and does not receive revenue in any way. H&M's business concept is to offer fashion and quality at the best price. H&M has since it was founded in 1947 grown into one of the world's leading fashion companies.</a></li>
+                    <button class ="hideLegal">Read Less</button>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="HM Branding">
+            <div class="ftrMainItem">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
+</div>    <!--      closes entire page grid        -->
+
+      <script type="text/javascript" src="hmLite (js).js"></script> 
+ </html>
