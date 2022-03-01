@@ -9,8 +9,8 @@
 
     @font-face {
       font-family: "HMSansLatin-Regular";
-      src: url("../../Material/Assets/09c8fb44d2c62d99647e4ce58736293e.woff2") format("woff2"),
-        url("../../Material/Assets/09c8fb44d2c62d99647e4ce58736293e.woff") format("woff"),
+      src: url("../Material/Assets/09c8fb44d2c62d99647e4ce58736293e.woff2") format("woff2"),
+        url("../Material/Assets/09c8fb44d2c62d99647e4ce58736293e.woff") format("woff"),
     }
 
     * {
