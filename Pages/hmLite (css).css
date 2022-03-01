@@ -1,9 +1,16 @@
+    /* Mixed content (HTTP & HTTPS) isn't allowed. So the fonts will be downloaded instead. 
     @import url("https://db.onlinewebfonts.com/c/09c8fb44d2c62d99647e4ce58736293e?family=HMSansLatin-Regular");
 
     @font-face {
       font-family: "HMSansLatin-Regular";
       src: url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.woff2") format("woff2"),
         url("https://db.onlinewebfonts.com/t/09c8fb44d2c62d99647e4ce58736293e.woff") format("woff"),
+    }*/
+
+    @font-face {
+      font-family: "HMSansLatin-Regular";
+      src: url("../Material/Assets/09c8fb44d2c62d99647e4ce58736293e.woff2") format("woff2"),
+        url("../Material/Assets/09c8fb44d2c62d99647e4ce58736293e.woff") format("woff"),
     }
 
     * {
