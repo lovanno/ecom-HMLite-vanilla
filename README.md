@@ -22,9 +22,7 @@
 
 (*Reasoning:* The focus is learning good design practices for future projects)
 
-&nbsp;
-
-•*A1 Looking at images, understanding div sections breakpoints, and seeing if pseudo elements are used is allowed 
+• A1 Looking at images, understanding div sections breakpoints, and seeing if pseudo elements are used is allowed 
 
 (*Reasoning:* This helps future functionality and understanding of libraries used (SASS, jQuery, etc))
 
@@ -70,6 +68,7 @@
 • The difference between HTMLcollection live vs nodelist: Only some element retrievers are live.  
 
 >   Live 
+
     document.getElementsByClassName() is an HTMLCollection
 
     document.getElementsByTagName() is an HTMLCollection
@@ -164,7 +163,7 @@
 
 
 
-## Future Features
+## Future Features 💻
 
 
 • Making Advanced searches (3-7 word searches) with auto-correct searches
