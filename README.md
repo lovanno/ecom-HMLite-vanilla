@@ -6,13 +6,13 @@
 ![displayImg!](Material/Assets/finDisplay.png)
 
 
-#### **Objective 📈:** **Replicate a successful company' Website**
+#### **Objective 📈:** **Replicate a successful company's Website**
 
 **Requirements** 🚦
 
 • *Must look 90%+ identical. Someone should be able to look and say "what are you doing on X Company's site" without hesitation!*
 
-• *Cannot look at HTML design from source to copy structure *A1*
+• *Cannot look at HTML design from source to copy structure A1*
 
 &nbsp;
 
@@ -21,6 +21,8 @@
 • Copying fonts, colors and sizes 
 
 (*Reasoning:* The focus is learning good design practices for future projects)
+
+&nbsp;
 
 •*A1 Looking at images, understanding div sections breakpoints, and seeing if pseudo elements are used is allowed 
 
@@ -43,27 +45,40 @@
 
 • You can use a comma (“,”) for a space when using classList.add in Javascript
 
+&nbsp;
+
 • Pseudo Elements can be Classes or Elements and are used to decorate the page. 
 
 &emsp; &emsp;If an image doesn’t load, a pseudo element can be shown to display an idea of what should be there. It can also be used to save space if elements aren’t used on certain media queries. 
+
+&nbsp;
 
 • Using px’s for most elements is acceptable. 
 
 &emsp; &emsp; This was an eye opening because I thought only % and viewport lengths were acceptable unless working on fixed elements (borders). However, the main idea is making the website accessible to everyone. If the element is RWD with PX, it doesn’t matter what measurements are used.
 
+&nbsp;
+
 •  Padding/Max Width’s should be used with CSS Grid’s. This allows for more RWD. 
+
+&nbsp;
 
 • Hiding/Showing text through buttons can be done to increase user experience. 
 
+&nbsp;
+
 • The difference between HTMLcollection live vs nodelist: Only some element retrievers are live.  
 
-| document.getElementsByClassName() is an HTMLCollection, and is live.
+>   Live 
+    document.getElementsByClassName() is an HTMLCollection
 
-| document.getElementsByTagName() is an HTMLCollection, and is live.
+    document.getElementsByTagName() is an HTMLCollection
 
-| document.getElementsByName() is a NodeList and is live.
+    document.getElementsByName() is a NodeList and is live.
 
-| document.querySelectorAll() is a NodeList and is not live.
+>   Static
+
+    document.querySelectorAll() is a NodeList
 
 
 &nbsp;
@@ -88,7 +103,7 @@
 
 • **(2) Cart Multiplication is Incorrect**
 
->   (1) 6.99 (Base Product Value - ID 1)
+>   (1) 6.99 (Product Price)
 
     Quantity     	 Output               Expected
 
@@ -96,11 +111,9 @@
 
     (3) 	      	 41.94                20.97
 
-    (4)	      	     69.9                 27.96
+    (4)	      	 69.90                  27.96
 
     (5) 	      	 104.85        	      34.95
-
-&nbsp;
 
 🔑*Simplifying selectors to only one selector for the total. I used too many selectors which added unnecessary computation.*
 
@@ -136,6 +149,7 @@
 • **HTML Collection vs NodeList**
 
 >   document.querySelectorAll is static
+
     var sizeTest5 = document.querySelectorAll(“div.filtContainer.fav”);
 
     Array.from(sizeTest5).forEach(sideTest5 => sideTest5.classList.add('hideFilterContainer'));
@@ -148,14 +162,9 @@
 
 &nbsp;
 
-&nbsp;
 
 
-
-
-
-
-#### Future Features
+## Future Features
 
 
 • Making Advanced searches (3-7 word searches) with auto-correct searches
@@ -166,7 +175,7 @@
 
 • Saving space in the HTML & CSS write up by using a database for products or an alternative solution
 
-
+&nbsp;
 
 *📚 Lesson Credit | Sasha Kondrashov*
 
