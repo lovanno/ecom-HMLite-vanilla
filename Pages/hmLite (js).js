@@ -725,7 +725,8 @@
 
 
         /*checks to see if the enter key is pressed*/
-        inputTest.onkeydown = function(e){              
+        inputTest.onkeydown = function(e){  
+        try{
             if(e.keyCode == 13){
                 const searchTest = inputTest.value;
                 /*inputTest.value = "";*/
@@ -1056,8 +1057,12 @@
 
                 }
             }
-        }
- 
+
+            }
+            catch{
+                console.log("You can't search in the home page")
+            }
+        } 
 
 
  
