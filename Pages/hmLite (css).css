@@ -1254,6 +1254,7 @@
       text-align: center;
       display: grid;
       grid-auto-rows: 0;
+      margin: 0;
 
       grid-template-columns: 0.75fr repeat(3, 1fr);
       grid-template-rows: 0.15fr 0.0fr 0.055fr 0.022fr 0.005fr 0.3fr 0.05fr 0.09fr 0.08fr 0.04fr 0.15fr;
@@ -1270,6 +1271,7 @@
         ". showProd2 showProd2 showProd2"
         ". trendProd trendProd trendProd"
         "footer2 footer2 footer2 footer2";
+      height: 5rem;       /*Temp fix to white space on bottom of footer*/
     }
 
 
@@ -3753,7 +3755,7 @@
 
       /**!                                  (1) navBar                                      section1                             !**/
       nav.navbar.Banner {
-        padding-right: 90px;
+        padding-right: 115px;
       }
 
       .navBar.\32 {
@@ -3761,17 +3763,18 @@
       }
 
       .productSectCont::before {
+        top: 40.17%;
         left: 8%;
       }
 
-      .topMenuContainer.\32 {
-        position: absolute;
-        left: 33%;
+      .pageLocationContainer {
+        padding-right: 0px;
+        padding-left: 79px;
       }
 
-
       ul.menu {
-        left: 24vw;
+        top: 40px;
+        left: 112px;
         gap: 1rem;
       }
 
