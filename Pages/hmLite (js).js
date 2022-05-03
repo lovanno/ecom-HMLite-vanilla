@@ -109,7 +109,8 @@
 
         function retrieveProdImage(image){
             const prodImgRetrieve = window.getComputedStyle(image).backgroundImage; 
-            const prodImgUrl = "url(\".." + prodImgRetrieve.slice(110, -1) + ")";           /*Issues with img's not loading lie here*/
+            const prodImgUrl = "url(\".." + prodImgRetrieve.slice(40, -1) + ")";   /*Netlify slice(40, -1), Local: slice(110, -1)*/    
+            /*Issues with img's not loading lie here. Launch and local do not match because provider has to store images*/
             return prodImgUrl
         }
  
