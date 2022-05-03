@@ -109,7 +109,7 @@
 
         function retrieveProdImage(image){
             const prodImgRetrieve = window.getComputedStyle(image).backgroundImage; 
-            const prodImgUrl = "url(\".." + prodImgRetrieve.slice(141, -1) + ")";
+            const prodImgUrl = "url(\".." + prodImgRetrieve.slice(110, -1) + ")";           /*Issues with img's not loading lie here*/
             return prodImgUrl
         }
  
