@@ -459,6 +459,7 @@
 
     .discountBtnDiv {
       display: flex;
+      display: none;
       justify-content: space-around;
       width: 40%;
 
@@ -887,7 +888,7 @@
 
     .moreInfoBtn {
       position: relative;
-      left: 30%;
+      left: 15%;
       height: 24px;
       width: 24px;
       border-radius: 50%;
@@ -971,6 +972,7 @@
 
 
     .trendProdBox {
+      cursor: pointer;
       display: flex;
       flex-direction: column;
       align-content: flex-start;
@@ -1057,6 +1059,7 @@
 
 
     .moreInfoBtn.\32 {
+      display: none;
       position: absolute;
       top: 29%;
       left: 77%;

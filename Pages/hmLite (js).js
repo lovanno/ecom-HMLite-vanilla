@@ -279,6 +279,7 @@
                         totalShipping.style.display = "block";
 
                         totalShipping.innerHTML = "Shipping " + (spanInsertShipping);
+                        (document.querySelector("div.discountBtnDiv")).style.display = "flex";
                     }
                     cartContainer.insertBefore(document.querySelector("div.cartBox.\\3" + cartOrder), (document.querySelector("div.cartBox.-\\31")));
 
@@ -381,6 +382,7 @@
                 console.log("Reading Deleted Products has not been Developed");
                 if(countTotal == 0){
                     (document.querySelector("p.cartProdHeader.-\\31")).style.color = "black";
+                    (document.querySelector("div.discountBtnDiv")).style.display = "none";
                 }
             }
 
