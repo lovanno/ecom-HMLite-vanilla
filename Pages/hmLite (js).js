@@ -1083,7 +1083,9 @@
 
     /***                (15) selectedFilters                                                           section15              ***/
         const customFiltDiv = document.querySelector("div.selectedFilters.section");    /*Hides Custom Filt Section on launch*/
-        customFiltDiv.style.display = "none";
+        if(customFiltDiv){
+            customFiltDiv.style.display = "none";
+        }
 
         /*Elements to create new filter div's*/
         const firstCustomFilt = document.querySelector("li.selectFiltName.\\30");
@@ -1329,11 +1331,12 @@
         const gridProdSet = document.querySelector("div.menProdGrid.section > div.productGrid.container");
         const gridProdSet2 = document.querySelector("div.womenProd.section > div.productGrid.container");
 
-        for(let m = 32; m< (gridProdSet.children).length; m++){     /*+ Makes last 16 products hidden when shopPage is opened +*/
-            gridProdSet.children[m].style.display = "none";
-            gridProdSet2.children[m].style.display = "none";
+        if(gridProdSet){
+            for(let m = 32; m<(gridProdSet.children).length; m++){     /*+ Makes last 16 products hidden when shopPage is opened +*/
+                gridProdSet.children[m].style.display = "none";
+                gridProdSet2.children[m].style.display = "none";
+            }
         }
-
 
         /*+ Allows User to see More Products or See Less + */
         const hideLastProd = document.querySelectorAll("button.showMoreBtn");
@@ -1386,16 +1389,17 @@
             trends.classList.toggle("hideFilterContainer");
         }
 
-        showMoreTest.addEventListener("click", function(){
-            for(const trends of showedArray){
-                trends.classList.toggle("hideFilterContainer"); 
-            }
-
-            if(showMoreTest.textContent == "Show More (+8)"){
-                showMoreTest.textContent = "show less";
-            }
-            else{
-                showMoreTest.textContent = "Show More (+8)";
-            }
-        })
+        if(showMoreTest){
+            showMoreTest.addEventListener("click", function(){
+                for(const trends of showedArray){
+                    trends.classList.toggle("hideFilterContainer"); 
+                }   
+                if(showMoreTest.textContent == "Show More (+8)"){
+                    showMoreTest.textContent = "show less"
+                }
+                else{
+                    showMoreTest.textContent = "Show More (+8)";
+                }
+            })
+        }
  
